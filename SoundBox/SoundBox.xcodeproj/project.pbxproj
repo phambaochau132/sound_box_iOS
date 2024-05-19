@@ -1,0 +1,753 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		805484FC2BE39BF600B738A9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 805484FB2BE39BF600B738A9 /* GoogleService-Info.plist */; };
+		805484FF2BE39D4200B738A9 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 805484FE2BE39D4200B738A9 /* FirebaseAnalytics */; };
+		805485012BE39D4200B738A9 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 805485002BE39D4200B738A9 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		805485032BE3A05D00B738A9 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805485022BE3A05D00B738A9 /* BaseController.swift */; };
+		805485062BE3B5A100B738A9 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 805485052BE3B5A100B738A9 /* FirebaseDatabase */; };
+		80990A562BDEDC41003E6705 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80990A552BDEDC41003E6705 /* AppDelegate.swift */; };
+		80990A582BDEDC41003E6705 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80990A572BDEDC41003E6705 /* SceneDelegate.swift */; };
+		80990A5A2BDEDC41003E6705 /* LauchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80990A592BDEDC41003E6705 /* LauchController.swift */; };
+		80990A5D2BDEDC41003E6705 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80990A5B2BDEDC41003E6705 /* Main.storyboard */; };
+		80990A602BDEDC41003E6705 /* SoundBox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80990A5E2BDEDC41003E6705 /* SoundBox.xcdatamodeld */; };
+		80990A622BDEDC42003E6705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80990A612BDEDC42003E6705 /* Assets.xcassets */; };
+		80990A652BDEDC42003E6705 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80990A632BDEDC42003E6705 /* LaunchScreen.storyboard */; };
+		80990A702BDEDC42003E6705 /* SoundBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80990A6F2BDEDC42003E6705 /* SoundBoxTests.swift */; };
+		80990A7A2BDEDC42003E6705 /* SoundBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80990A792BDEDC42003E6705 /* SoundBoxUITests.swift */; };
+		80990A7C2BDEDC42003E6705 /* SoundBoxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80990A7B2BDEDC42003E6705 /* SoundBoxUITestsLaunchTests.swift */; };
+		80990A902BDEF0A5003E6705 /* GifLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80990A8F2BDEF0A5003E6705 /* GifLoader.swift */; };
+		80990A942BDEF46C003E6705 /* intro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 80990A932BDEF46C003E6705 /* intro.mp3 */; };
+		80990A962BDEF798003E6705 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80990A952BDEF798003E6705 /* HomeController.swift */; };
+		809E56B12BE7F8DB00E6227B /* PlayingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809E56B02BE7F8DB00E6227B /* PlayingController.swift */; };
+		80A1C7E02BF10A6E00ACAF98 /* FavouriteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A1C7DF2BF10A6E00ACAF98 /* FavouriteController.swift */; };
+		80A4052F2BE25B93001602DB /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A4052E2BE25B93001602DB /* Song.swift */; };
+		80BB93CB2BF2AD890070B87B /* FavouriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BB93CA2BF2AD890070B87B /* FavouriteTableViewCell.swift */; };
+		80D0A80B2BE007600091EA2A /* RecentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D0A80A2BE007600091EA2A /* RecentCollectionViewCell.swift */; };
+		80D0A80D2BE008400091EA2A /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D0A80C2BE008400091EA2A /* SongTableViewCell.swift */; };
+		80D1D1C62BDF7E0B009F00D2 /* Sound Box.gif in Resources */ = {isa = PBXBuildFile; fileRef = 80D1D1C52BDF7E0B009F00D2 /* Sound Box.gif */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		80990A6C2BDEDC42003E6705 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80990A4A2BDEDC41003E6705 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80990A512BDEDC41003E6705;
+			remoteInfo = SoundBox;
+		};
+		80990A762BDEDC42003E6705 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80990A4A2BDEDC41003E6705 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80990A512BDEDC41003E6705;
+			remoteInfo = SoundBox;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		805484FB2BE39BF600B738A9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		805485022BE3A05D00B738A9 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		80990A522BDEDC41003E6705 /* SoundBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		80990A552BDEDC41003E6705 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		80990A572BDEDC41003E6705 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		80990A592BDEDC41003E6705 /* LauchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauchController.swift; sourceTree = "<group>"; };
+		80990A5C2BDEDC41003E6705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		80990A5F2BDEDC41003E6705 /* SoundBox.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SoundBox.xcdatamodel; sourceTree = "<group>"; };
+		80990A612BDEDC42003E6705 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		80990A642BDEDC42003E6705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		80990A662BDEDC42003E6705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80990A6B2BDEDC42003E6705 /* SoundBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		80990A6F2BDEDC42003E6705 /* SoundBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundBoxTests.swift; sourceTree = "<group>"; };
+		80990A752BDEDC42003E6705 /* SoundBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundBoxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		80990A792BDEDC42003E6705 /* SoundBoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundBoxUITests.swift; sourceTree = "<group>"; };
+		80990A7B2BDEDC42003E6705 /* SoundBoxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundBoxUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		80990A8F2BDEF0A5003E6705 /* GifLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifLoader.swift; sourceTree = "<group>"; };
+		80990A932BDEF46C003E6705 /* intro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = intro.mp3; sourceTree = "<group>"; };
+		80990A952BDEF798003E6705 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		809E56B02BE7F8DB00E6227B /* PlayingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingController.swift; sourceTree = "<group>"; };
+		80A1C7DF2BF10A6E00ACAF98 /* FavouriteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteController.swift; sourceTree = "<group>"; };
+		80A4052E2BE25B93001602DB /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		80BB93CA2BF2AD890070B87B /* FavouriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteTableViewCell.swift; sourceTree = "<group>"; };
+		80D0A80A2BE007600091EA2A /* RecentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCollectionViewCell.swift; sourceTree = "<group>"; };
+		80D0A80C2BE008400091EA2A /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
+		80D1D1C52BDF7E0B009F00D2 /* Sound Box.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Sound Box.gif"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		80990A4F2BDEDC41003E6705 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				805485062BE3B5A100B738A9 /* FirebaseDatabase in Frameworks */,
+				805484FF2BE39D4200B738A9 /* FirebaseAnalytics in Frameworks */,
+				805485012BE39D4200B738A9 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80990A682BDEDC42003E6705 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80990A722BDEDC42003E6705 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		805485042BE3B5A100B738A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80990A492BDEDC41003E6705 = {
+			isa = PBXGroup;
+			children = (
+				80990A542BDEDC41003E6705 /* SoundBox */,
+				80990A6E2BDEDC42003E6705 /* SoundBoxTests */,
+				80990A782BDEDC42003E6705 /* SoundBoxUITests */,
+				80990A532BDEDC41003E6705 /* Products */,
+				805485042BE3B5A100B738A9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		80990A532BDEDC41003E6705 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80990A522BDEDC41003E6705 /* SoundBox.app */,
+				80990A6B2BDEDC42003E6705 /* SoundBoxTests.xctest */,
+				80990A752BDEDC42003E6705 /* SoundBoxUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		80990A542BDEDC41003E6705 /* SoundBox */ = {
+			isa = PBXGroup;
+			children = (
+				805484FB2BE39BF600B738A9 /* GoogleService-Info.plist */,
+				80A4052D2BE25A82001602DB /* Models */,
+				80990A8C2BDEE560003E6705 /* Controls */,
+				80990A8B2BDEE545003E6705 /* Controllers */,
+				80990A882BDEDC60003E6705 /* System file */,
+				80990A5B2BDEDC41003E6705 /* Main.storyboard */,
+				80990A5E2BDEDC41003E6705 /* SoundBox.xcdatamodeld */,
+			);
+			path = SoundBox;
+			sourceTree = "<group>";
+		};
+		80990A6E2BDEDC42003E6705 /* SoundBoxTests */ = {
+			isa = PBXGroup;
+			children = (
+				80990A6F2BDEDC42003E6705 /* SoundBoxTests.swift */,
+			);
+			path = SoundBoxTests;
+			sourceTree = "<group>";
+		};
+		80990A782BDEDC42003E6705 /* SoundBoxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				80990A792BDEDC42003E6705 /* SoundBoxUITests.swift */,
+				80990A7B2BDEDC42003E6705 /* SoundBoxUITestsLaunchTests.swift */,
+			);
+			path = SoundBoxUITests;
+			sourceTree = "<group>";
+		};
+		80990A882BDEDC60003E6705 /* System file */ = {
+			isa = PBXGroup;
+			children = (
+				80D1D1C52BDF7E0B009F00D2 /* Sound Box.gif */,
+				80990A932BDEF46C003E6705 /* intro.mp3 */,
+				80990A552BDEDC41003E6705 /* AppDelegate.swift */,
+				80990A572BDEDC41003E6705 /* SceneDelegate.swift */,
+				80990A612BDEDC42003E6705 /* Assets.xcassets */,
+				80990A632BDEDC42003E6705 /* LaunchScreen.storyboard */,
+				80990A662BDEDC42003E6705 /* Info.plist */,
+			);
+			name = "System file";
+			sourceTree = "<group>";
+		};
+		80990A8B2BDEE545003E6705 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				80990A592BDEDC41003E6705 /* LauchController.swift */,
+				80990A8F2BDEF0A5003E6705 /* GifLoader.swift */,
+				80990A952BDEF798003E6705 /* HomeController.swift */,
+				805485022BE3A05D00B738A9 /* BaseController.swift */,
+				809E56B02BE7F8DB00E6227B /* PlayingController.swift */,
+				80A1C7DF2BF10A6E00ACAF98 /* FavouriteController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		80990A8C2BDEE560003E6705 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				80D0A80A2BE007600091EA2A /* RecentCollectionViewCell.swift */,
+				80D0A80C2BE008400091EA2A /* SongTableViewCell.swift */,
+				80BB93CA2BF2AD890070B87B /* FavouriteTableViewCell.swift */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
+		80A4052D2BE25A82001602DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				80A4052E2BE25B93001602DB /* Song.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		80990A512BDEDC41003E6705 /* SoundBox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80990A7F2BDEDC42003E6705 /* Build configuration list for PBXNativeTarget "SoundBox" */;
+			buildPhases = (
+				80990A4E2BDEDC41003E6705 /* Sources */,
+				80990A4F2BDEDC41003E6705 /* Frameworks */,
+				80990A502BDEDC41003E6705 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoundBox;
+			packageProductDependencies = (
+				805484FE2BE39D4200B738A9 /* FirebaseAnalytics */,
+				805485002BE39D4200B738A9 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				805485052BE3B5A100B738A9 /* FirebaseDatabase */,
+			);
+			productName = SoundBox;
+			productReference = 80990A522BDEDC41003E6705 /* SoundBox.app */;
+			productType = "com.apple.product-type.application";
+		};
+		80990A6A2BDEDC42003E6705 /* SoundBoxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80990A822BDEDC42003E6705 /* Build configuration list for PBXNativeTarget "SoundBoxTests" */;
+			buildPhases = (
+				80990A672BDEDC42003E6705 /* Sources */,
+				80990A682BDEDC42003E6705 /* Frameworks */,
+				80990A692BDEDC42003E6705 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80990A6D2BDEDC42003E6705 /* PBXTargetDependency */,
+			);
+			name = SoundBoxTests;
+			productName = SoundBoxTests;
+			productReference = 80990A6B2BDEDC42003E6705 /* SoundBoxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		80990A742BDEDC42003E6705 /* SoundBoxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80990A852BDEDC42003E6705 /* Build configuration list for PBXNativeTarget "SoundBoxUITests" */;
+			buildPhases = (
+				80990A712BDEDC42003E6705 /* Sources */,
+				80990A722BDEDC42003E6705 /* Frameworks */,
+				80990A732BDEDC42003E6705 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80990A772BDEDC42003E6705 /* PBXTargetDependency */,
+			);
+			name = SoundBoxUITests;
+			productName = SoundBoxUITests;
+			productReference = 80990A752BDEDC42003E6705 /* SoundBoxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		80990A4A2BDEDC41003E6705 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					80990A512BDEDC41003E6705 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					80990A6A2BDEDC42003E6705 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 80990A512BDEDC41003E6705;
+					};
+					80990A742BDEDC42003E6705 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 80990A512BDEDC41003E6705;
+					};
+				};
+			};
+			buildConfigurationList = 80990A4D2BDEDC41003E6705 /* Build configuration list for PBXProject "SoundBox" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 80990A492BDEDC41003E6705;
+			packageReferences = (
+				805484FD2BE39D4200B738A9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 80990A532BDEDC41003E6705 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				80990A512BDEDC41003E6705 /* SoundBox */,
+				80990A6A2BDEDC42003E6705 /* SoundBoxTests */,
+				80990A742BDEDC42003E6705 /* SoundBoxUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		80990A502BDEDC41003E6705 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80990A652BDEDC42003E6705 /* LaunchScreen.storyboard in Resources */,
+				80D1D1C62BDF7E0B009F00D2 /* Sound Box.gif in Resources */,
+				80990A622BDEDC42003E6705 /* Assets.xcassets in Resources */,
+				80990A5D2BDEDC41003E6705 /* Main.storyboard in Resources */,
+				80990A942BDEF46C003E6705 /* intro.mp3 in Resources */,
+				805484FC2BE39BF600B738A9 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80990A692BDEDC42003E6705 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80990A732BDEDC42003E6705 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		80990A4E2BDEDC41003E6705 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80A4052F2BE25B93001602DB /* Song.swift in Sources */,
+				80990A5A2BDEDC41003E6705 /* LauchController.swift in Sources */,
+				805485032BE3A05D00B738A9 /* BaseController.swift in Sources */,
+				80990A562BDEDC41003E6705 /* AppDelegate.swift in Sources */,
+				80990A962BDEF798003E6705 /* HomeController.swift in Sources */,
+				80990A902BDEF0A5003E6705 /* GifLoader.swift in Sources */,
+				80D0A80B2BE007600091EA2A /* RecentCollectionViewCell.swift in Sources */,
+				809E56B12BE7F8DB00E6227B /* PlayingController.swift in Sources */,
+				80990A582BDEDC41003E6705 /* SceneDelegate.swift in Sources */,
+				80A1C7E02BF10A6E00ACAF98 /* FavouriteController.swift in Sources */,
+				80BB93CB2BF2AD890070B87B /* FavouriteTableViewCell.swift in Sources */,
+				80990A602BDEDC41003E6705 /* SoundBox.xcdatamodeld in Sources */,
+				80D0A80D2BE008400091EA2A /* SongTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80990A672BDEDC42003E6705 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80990A702BDEDC42003E6705 /* SoundBoxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80990A712BDEDC42003E6705 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80990A7C2BDEDC42003E6705 /* SoundBoxUITestsLaunchTests.swift in Sources */,
+				80990A7A2BDEDC42003E6705 /* SoundBoxUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		80990A6D2BDEDC42003E6705 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80990A512BDEDC41003E6705 /* SoundBox */;
+			targetProxy = 80990A6C2BDEDC42003E6705 /* PBXContainerItemProxy */;
+		};
+		80990A772BDEDC42003E6705 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80990A512BDEDC41003E6705 /* SoundBox */;
+			targetProxy = 80990A762BDEDC42003E6705 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		80990A5B2BDEDC41003E6705 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80990A5C2BDEDC41003E6705 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		80990A632BDEDC42003E6705 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80990A642BDEDC42003E6705 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		80990A7D2BDEDC42003E6705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		80990A7E2BDEDC42003E6705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		80990A802BDEDC42003E6705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SoundBox/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sound Box";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.edu.tdc.SoundBox132;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		80990A812BDEDC42003E6705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SoundBox/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sound Box";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.edu.tdc.SoundBox132;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		80990A832BDEDC42003E6705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.edu.tdc.SoundBoxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SoundBox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SoundBox";
+			};
+			name = Debug;
+		};
+		80990A842BDEDC42003E6705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.edu.tdc.SoundBoxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SoundBox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SoundBox";
+			};
+			name = Release;
+		};
+		80990A862BDEDC42003E6705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.edu.tdc.SoundBoxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SoundBox;
+			};
+			name = Debug;
+		};
+		80990A872BDEDC42003E6705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.edu.tdc.SoundBoxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SoundBox;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		80990A4D2BDEDC41003E6705 /* Build configuration list for PBXProject "SoundBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80990A7D2BDEDC42003E6705 /* Debug */,
+				80990A7E2BDEDC42003E6705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80990A7F2BDEDC42003E6705 /* Build configuration list for PBXNativeTarget "SoundBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80990A802BDEDC42003E6705 /* Debug */,
+				80990A812BDEDC42003E6705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80990A822BDEDC42003E6705 /* Build configuration list for PBXNativeTarget "SoundBoxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80990A832BDEDC42003E6705 /* Debug */,
+				80990A842BDEDC42003E6705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80990A852BDEDC42003E6705 /* Build configuration list for PBXNativeTarget "SoundBoxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80990A862BDEDC42003E6705 /* Debug */,
+				80990A872BDEDC42003E6705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		805484FD2BE39D4200B738A9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 10.25.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		805484FE2BE39D4200B738A9 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 805484FD2BE39D4200B738A9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		805485002BE39D4200B738A9 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 805484FD2BE39D4200B738A9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		805485052BE3B5A100B738A9 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 805484FD2BE39D4200B738A9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		80990A5E2BDEDC41003E6705 /* SoundBox.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				80990A5F2BDEDC41003E6705 /* SoundBox.xcdatamodel */,
+			);
+			currentVersion = 80990A5F2BDEDC41003E6705 /* SoundBox.xcdatamodel */;
+			path = SoundBox.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 80990A4A2BDEDC41003E6705 /* Project object */;
+}
