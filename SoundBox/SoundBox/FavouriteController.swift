@@ -11,15 +11,16 @@ class FavouriteController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var listFavourite: UITableView!
     var favourites=[Song]()
     var changeFavouriteList=false
+//    var initialUI=false
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        favourites.count
+       return favourites.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let favouriteItem=favourites[indexPath.row]
             let cell=tableView.dequeueReusableCell(withIdentifier: "CellFavourite") as! FavouriteTableViewCell
-            cell.imageSong.image=BaseController.loadImage(url: favouriteItem.getThumbnail())
+            cell.imageSong.downloaded(from: favouriteItem.getThumbnail())
             cell.nameSong.text=favouriteItem.getName()
             cell.singer.text=favouriteItem.getSinger()
         return cell
@@ -38,17 +39,33 @@ class FavouriteController: UIViewController, UITableViewDataSource, UITableViewD
         setDataFavouriteSongs()
         listFavourite.dataSource=self
         listFavourite.delegate=self
+//        initialUI=true
     }
+    
+    // reload lai TableView khi man hinh xuat hien lai lan nua
     override func viewWillAppear(_ animated: Bool) {
+        setDataFavouriteSongs()
+        // reaLoad lai tableView khi du ds bai hat yeu thich thay doi
         if changeFavouriteList{
+//        if initialUI {
             setDataFavouriteSongs()
-            changeFavouriteList=false
         }
+            // Tra ve false khi reload xong
+//            changeFavouriteList=false
     }
-
+    
+    @IBAction func searchFavourite(_ sender: UIBarButtonItem) {
+        let controller=storyboard?.instantiateViewController(withIdentifier: "SearchScreen") as! SearchController
+        controller.listSong=favourites
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    // Lay du lieu tu Database va them vao ds bai hat
     func setDataFavouriteSongs(){
-        favourites.removeAll()
-        BaseController.ref.child("favouriteSongs").observe(.childAdded, with: {DataSnapshot in
+        favourites = []
+        print("Chau \(favourites.count)")
+        self.listFavourite.reloadData()
+        BaseController.ref.child(BaseController.idUser).child("favouriteSongs").observe(.childAdded, with: {DataSnapshot in
                 if let songs = DataSnapshot.value as? [String:NSObject]{
                         let id:String=songs["id"] as! String
                         let name:String=songs["name"] as! String
@@ -57,11 +74,12 @@ class FavouriteController: UIViewController, UITableViewDataSource, UITableViewD
                         let file_path:String=songs["file_path"] as! String
                         let rating:Int=songs["rating"] as! Int
                         self.favourites.append(Song(id: id, name: name, singer: singer, thumbnail: thumbnail, file_path: file_path, rating: rating))
+                    
+                    //Reload lai TableView (uI) khi ds bai hat thay doi
                     self.listFavourite.reloadData()
                 }else{
-                    print("Loi database")
+                    fatalError("Loi database")
                 }
-
             })
     }
 

@@ -24,8 +24,8 @@ class LauchController: UIViewController {
         logoLauch.image=UIImage.gifImageWithName("Sound Box")
         loadAudioLauch()
         
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+6){
-            let controller=self.storyboard!.instantiateViewController(withIdentifier: "TabBar")
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+3){
+            let controller=self.storyboard!.instantiateViewController(withIdentifier: "AuthenticationController")
             //Replace rootView
             UIApplication.shared.keyWindow?.rootViewController=controller
         }

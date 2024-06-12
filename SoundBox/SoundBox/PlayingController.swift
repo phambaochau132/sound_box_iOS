@@ -50,9 +50,7 @@ class PlayingController: UIViewController, AVAudioPlayerDelegate,UIGestureRecogn
                     let homeController=tabBarController?.viewControllers![0] as! HomeController
                     homeController.changeRecentSongs=true
                 }
-                DispatchQueue.main.async { [self] in
-                    imageSong.image=BaseController.loadImage(url: selectedSong.getThumbnail())
-                }
+                self.imageSong.downloaded(from: selectedSong.getThumbnail())
                 DispatchQueue.main.async {
                     self.loadMusic()
                 }
@@ -69,41 +67,51 @@ class PlayingController: UIViewController, AVAudioPlayerDelegate,UIGestureRecogn
     }
     
     func addRecentSong(song:Song) {
-        BaseController.ref.child("recentSongs").child("\(song.getID())").removeValue()
-        BaseController.ref.child("recentSongs").child("\(song.getID())").setValue(song.parseObjectToDictionary())
+        BaseController.ref.child(BaseController.idUser).child("recentSongs").child("\(song.getID())").removeValue()
+        BaseController.ref.child(BaseController.idUser).ref.child("recentSongs").child("\(song.getID())").setValue(song.parseObjectToDictionary())
     }
     
     func setInitFavourite(){
         if let selected = selectedSong{
             favouriteSong.image = UIImage(systemName: "heart")
-            BaseController.ref.child("favouriteSongs").observeSingleEvent(of: .value, with:{ [self]DataSnapshot in
+            BaseController.ref.child(BaseController.idUser).child("favouriteSongs").observeSingleEvent(of: .value, with:{ [self]DataSnapshot in
                 if DataSnapshot.hasChild("\(selected.getID())"){
                     favouriteSong.image = UIImage(systemName: "heart.fill")
                     isFavourite=true
                 }
             })
         }
-            
      }
     
     func setChangeFavourite(){
         if let selected = selectedSong{
+            // Kiem tra trang thai hien tai
+            // Neu them roi thi thay doi trang thai la false
             if isFavourite{
                 isFavourite=false
-                BaseController.ref.child("favouriteSongs").child("\(selected.getID())").removeValue()
+                // Xoa bai hat khoi database
+                BaseController.ref.child(BaseController.idUser).child("favouriteSongs").child("\(selected.getID())").removeValue()
+                // Thay doi lai hinh mac dinh
                 favouriteSong.image = UIImage(systemName: "heart")
             }
+            // Neu chua duoc them thi true
             else{
+                //
                 isFavourite=true
-                BaseController.ref.child("favouriteSongs").child("\(selected.getID())").setValue(selected.parseObjectToDictionary())
+                // Them bai hat vao database
+                BaseController.ref.child(BaseController.idUser).child("favouriteSongs").child("\(selected.getID())").setValue(selected.parseObjectToDictionary())
+                // thay doi hinh
                 favouriteSong.image = UIImage(systemName: "heart.fill")
             }
         }
     }
     
     @IBAction func addFavouriteSong(_ sender: UIBarButtonItem) {
+        //Goi ham Thay doi trang thai
         setChangeFavourite()
-        let favouriteController=tabBarController?.viewControllers![2] as! FavouriteController
+        
+        // Tim man hinh` de thong bao load lai tableView(Danh sach).
+        let favouriteController=storyboard?.instantiateViewController(withIdentifier: "FavouriteScreen") as! FavouriteController
         favouriteController.changeFavouriteList=true
     }
     

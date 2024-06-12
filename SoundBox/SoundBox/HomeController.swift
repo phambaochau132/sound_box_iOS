@@ -43,13 +43,10 @@ class HomeController: UIViewController,UICollectionViewDataSource,UITableViewDat
         cell.nameSong.text=song.getName()
         cell.singer.text=song.getSinger()
         cell.rating.text=String(song.getRating())
-        DispatchQueue.main.async {
-            cell.imageSong.image=BaseController.loadImage(url: song.getThumbnail())}
+        cell.imageSong.downloaded(from: song.getThumbnail())
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-        
         //Truyen gia tri
         let navVC = tabBarController?.viewControllers![1]
         let controller = navVC as! PlayingController
@@ -68,8 +65,7 @@ class HomeController: UIViewController,UICollectionViewDataSource,UITableViewDat
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellRecent", for: indexPath) as! RecentCollectionViewCell
         let song=recentSongs[indexPath.row]
         cell.nameSong.text=song.getName()
-        DispatchQueue.main.async {
-            cell.imageSong.image=BaseController.loadImage(url: song.getThumbnail())}
+        cell.imageSong.downloaded(from: song.getThumbnail())
         return cell
     }
     
@@ -86,6 +82,7 @@ class HomeController: UIViewController,UICollectionViewDataSource,UITableViewDat
     
     func setDataRecommendSongs(){
         recentSongs.removeAll()
+        self.listRecommend.reloadData()
         BaseController.ref.child("recommendSongs").observe(.childAdded, with: {DataSnapshot in
                 if let songs = DataSnapshot.value as? [String:NSObject]{
                     let id:String=songs["id"] as! String
@@ -104,7 +101,7 @@ class HomeController: UIViewController,UICollectionViewDataSource,UITableViewDat
     }
     func setDataRecentSongs(){
         recentSongs.removeAll()
-        BaseController.ref.child("recentSongs").observe(.childAdded, with: {DataSnapshot in
+        let a = BaseController.ref.child(BaseController.idUser).child("recentSongs").observe(.childAdded, with: {DataSnapshot in
                 if let songs = DataSnapshot.value as? [String:NSObject]{
                     let id:String=songs["id"] as! String
                      let name:String=songs["name"] as! String
@@ -113,13 +110,22 @@ class HomeController: UIViewController,UICollectionViewDataSource,UITableViewDat
                      let file_path:String=songs["file_path"] as! String
                      let rating:Int=songs["rating"] as! Int
                     self.recentSongs.insert((Song(id: id, name: name, singer: singer, thumbnail: thumbnail, file_path: file_path, rating: rating)), at: 0)
-
+                    print("recentSongs========== \(self.recentSongs)")
                     self.listRecent.reloadData()
                 }else{
                     print("Loi database")
                 }
 
             })
+        print("data \(a)")
+        print("recentSongs========== \(recentSongs)")
     }
+    
+    @IBAction func searchAllSong(_ sender: UIButton) {
+        let controller=storyboard?.instantiateViewController(withIdentifier: "SearchScreen") as! SearchController
+        controller.listSong=recommendSongs
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
 
 }

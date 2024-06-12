@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		805484FC2BE39BF600B738A9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 805484FB2BE39BF600B738A9 /* GoogleService-Info.plist */; };
 		805484FF2BE39D4200B738A9 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 805484FE2BE39D4200B738A9 /* FirebaseAnalytics */; };
 		805485012BE39D4200B738A9 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 805485002BE39D4200B738A9 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		805485032BE3A05D00B738A9 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805485022BE3A05D00B738A9 /* BaseController.swift */; };
@@ -32,6 +31,13 @@
 		80D0A80B2BE007600091EA2A /* RecentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D0A80A2BE007600091EA2A /* RecentCollectionViewCell.swift */; };
 		80D0A80D2BE008400091EA2A /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D0A80C2BE008400091EA2A /* SongTableViewCell.swift */; };
 		80D1D1C62BDF7E0B009F00D2 /* Sound Box.gif in Resources */ = {isa = PBXBuildFile; fileRef = 80D1D1C52BDF7E0B009F00D2 /* Sound Box.gif */; };
+		9A00BC582C0122C6005F590D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A00BC572C0122C6005F590D /* GoogleService-Info.plist */; };
+		CE751C032BFFB73C004AF4A7 /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE751C022BFFB73C004AF4A7 /* AuthenticationController.swift */; };
+		CE751C052BFFB7BE004AF4A7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CE751C042BFFB7BE004AF4A7 /* FirebaseAuth */; };
+		CE751C072BFFB8AB004AF4A7 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = CE751C062BFFB8AB004AF4A7 /* GoogleSignIn */; };
+		CE751C092BFFB8AB004AF4A7 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE751C082BFFB8AB004AF4A7 /* GoogleSignInSwift */; };
+		CE7FDD7C2BFE401900ED2AD1 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FDD7B2BFE401900ED2AD1 /* SearchController.swift */; };
+		CE7FDD7E2BFF0F3300ED2AD1 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FDD7D2BFF0F3300ED2AD1 /* ResultTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +58,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		805484FB2BE39BF600B738A9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		805485022BE3A05D00B738A9 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		80990A522BDEDC41003E6705 /* SoundBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80990A552BDEDC41003E6705 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +83,10 @@
 		80D0A80A2BE007600091EA2A /* RecentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCollectionViewCell.swift; sourceTree = "<group>"; };
 		80D0A80C2BE008400091EA2A /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		80D1D1C52BDF7E0B009F00D2 /* Sound Box.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Sound Box.gif"; sourceTree = "<group>"; };
+		9A00BC572C0122C6005F590D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE751C022BFFB73C004AF4A7 /* AuthenticationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationController.swift; sourceTree = "<group>"; };
+		CE7FDD7B2BFE401900ED2AD1 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		CE7FDD7D2BFF0F3300ED2AD1 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +94,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE751C072BFFB8AB004AF4A7 /* GoogleSignIn in Frameworks */,
 				805485062BE3B5A100B738A9 /* FirebaseDatabase in Frameworks */,
 				805484FF2BE39D4200B738A9 /* FirebaseAnalytics in Frameworks */,
+				CE751C092BFFB8AB004AF4A7 /* GoogleSignInSwift in Frameworks */,
 				805485012BE39D4200B738A9 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				CE751C052BFFB7BE004AF4A7 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,7 +151,7 @@
 		80990A542BDEDC41003E6705 /* SoundBox */ = {
 			isa = PBXGroup;
 			children = (
-				805484FB2BE39BF600B738A9 /* GoogleService-Info.plist */,
+				9A00BC572C0122C6005F590D /* GoogleService-Info.plist */,
 				80A4052D2BE25A82001602DB /* Models */,
 				80990A8C2BDEE560003E6705 /* Controls */,
 				80990A8B2BDEE545003E6705 /* Controllers */,
@@ -190,6 +202,8 @@
 				805485022BE3A05D00B738A9 /* BaseController.swift */,
 				809E56B02BE7F8DB00E6227B /* PlayingController.swift */,
 				80A1C7DF2BF10A6E00ACAF98 /* FavouriteController.swift */,
+				CE7FDD7B2BFE401900ED2AD1 /* SearchController.swift */,
+				CE751C022BFFB73C004AF4A7 /* AuthenticationController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +214,7 @@
 				80D0A80A2BE007600091EA2A /* RecentCollectionViewCell.swift */,
 				80D0A80C2BE008400091EA2A /* SongTableViewCell.swift */,
 				80BB93CA2BF2AD890070B87B /* FavouriteTableViewCell.swift */,
+				CE7FDD7D2BFF0F3300ED2AD1 /* ResultTableViewCell.swift */,
 			);
 			name = Controls;
 			sourceTree = "<group>";
@@ -232,6 +247,9 @@
 				805484FE2BE39D4200B738A9 /* FirebaseAnalytics */,
 				805485002BE39D4200B738A9 /* FirebaseAnalyticsWithoutAdIdSupport */,
 				805485052BE3B5A100B738A9 /* FirebaseDatabase */,
+				CE751C042BFFB7BE004AF4A7 /* FirebaseAuth */,
+				CE751C062BFFB8AB004AF4A7 /* GoogleSignIn */,
+				CE751C082BFFB8AB004AF4A7 /* GoogleSignInSwift */,
 			);
 			productName = SoundBox;
 			productReference = 80990A522BDEDC41003E6705 /* SoundBox.app */;
@@ -307,6 +325,7 @@
 			mainGroup = 80990A492BDEDC41003E6705;
 			packageReferences = (
 				805484FD2BE39D4200B738A9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				CE7BA1202BFF5A2F00D49FE8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = 80990A532BDEDC41003E6705 /* Products */;
 			projectDirPath = "";
@@ -329,7 +348,7 @@
 				80990A622BDEDC42003E6705 /* Assets.xcassets in Resources */,
 				80990A5D2BDEDC41003E6705 /* Main.storyboard in Resources */,
 				80990A942BDEF46C003E6705 /* intro.mp3 in Resources */,
-				805484FC2BE39BF600B738A9 /* GoogleService-Info.plist in Resources */,
+				9A00BC582C0122C6005F590D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +376,7 @@
 				80A4052F2BE25B93001602DB /* Song.swift in Sources */,
 				80990A5A2BDEDC41003E6705 /* LauchController.swift in Sources */,
 				805485032BE3A05D00B738A9 /* BaseController.swift in Sources */,
+				CE7FDD7C2BFE401900ED2AD1 /* SearchController.swift in Sources */,
 				80990A562BDEDC41003E6705 /* AppDelegate.swift in Sources */,
 				80990A962BDEF798003E6705 /* HomeController.swift in Sources */,
 				80990A902BDEF0A5003E6705 /* GifLoader.swift in Sources */,
@@ -366,6 +386,8 @@
 				80A1C7E02BF10A6E00ACAF98 /* FavouriteController.swift in Sources */,
 				80BB93CB2BF2AD890070B87B /* FavouriteTableViewCell.swift in Sources */,
 				80990A602BDEDC41003E6705 /* SoundBox.xcdatamodeld in Sources */,
+				CE751C032BFFB73C004AF4A7 /* AuthenticationController.swift in Sources */,
+				CE7FDD7E2BFF0F3300ED2AD1 /* ResultTableViewCell.swift in Sources */,
 				80D0A80D2BE008400091EA2A /* SongTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,7 +494,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -526,7 +548,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -543,7 +565,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4H374RR89U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SoundBox/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Sound Box";
@@ -552,12 +574,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = vn.edu.tdc.SoundBox132;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.edu.tdc.SoundBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -572,7 +595,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4H374RR89U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SoundBox/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Sound Box";
@@ -581,12 +604,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = vn.edu.tdc.SoundBox132;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.edu.tdc.SoundBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -601,8 +625,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29RT3HUACQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = vn.edu.tdc.SoundBoxTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -620,8 +645,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29RT3HUACQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = vn.edu.tdc.SoundBoxTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -638,6 +664,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V397GA3D45;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = vn.edu.tdc.SoundBoxUITests;
@@ -655,6 +682,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V397GA3D45;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = vn.edu.tdc.SoundBoxUITests;
@@ -676,7 +704,7 @@
 				80990A7E2BDEDC42003E6705 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		80990A7F2BDEDC42003E6705 /* Build configuration list for PBXNativeTarget "SoundBox" */ = {
 			isa = XCConfigurationList;
@@ -685,7 +713,7 @@
 				80990A812BDEDC42003E6705 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		80990A822BDEDC42003E6705 /* Build configuration list for PBXNativeTarget "SoundBoxTests" */ = {
 			isa = XCConfigurationList;
@@ -694,7 +722,7 @@
 				80990A842BDEDC42003E6705 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		80990A852BDEDC42003E6705 /* Build configuration list for PBXNativeTarget "SoundBoxUITests" */ = {
 			isa = XCConfigurationList;
@@ -703,7 +731,7 @@
 				80990A872BDEDC42003E6705 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 
@@ -714,6 +742,14 @@
 			requirement = {
 				kind = exactVersion;
 				version = 10.25.0;
+			};
+		};
+		CE7BA1202BFF5A2F00D49FE8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = exactVersion;
+				version = 7.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -733,6 +769,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 805484FD2BE39D4200B738A9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
+		};
+		CE751C042BFFB7BE004AF4A7 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 805484FD2BE39D4200B738A9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		CE751C062BFFB8AB004AF4A7 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE7BA1202BFF5A2F00D49FE8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		CE751C082BFFB8AB004AF4A7 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE7BA1202BFF5A2F00D49FE8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 
